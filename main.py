@@ -1,1 +1,1 @@
-print("hello")
+variable = 7
