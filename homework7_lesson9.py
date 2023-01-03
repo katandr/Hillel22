@@ -65,6 +65,10 @@
 #         поместить пару {ключ: [значение_из_первого_словаря, значение_из_второго_словаря]},
 #         {1:1, 2:2}, {11:11, 2:22} ---> {1:1, 11:11, 2:[2, 22]}
 
+
+
+import copy from deepcopy
+
 my_dict_1 = {1:1, 2:2, 5:5, 7:7}
 my_dict_2 = {11:11, 2:22, 1:56}
 keys_my_dict_1 = list(my_dict_1.keys())
@@ -94,9 +98,14 @@ print(f"unique_keys_1 {unique_keys_1}")
 dict_unique_keys1 = {x: my_dict_1[x] for x in unique_keys_1}
 print(dict_unique_keys1)
 
+
+
 print("my_dict_1", my_dict_1)
 print("my_dict_2", my_dict_2)
-combined_dict = my_dict_1.copy()
+
+# combined_dict = {k:v for k, v in my_dict_1.items()}
+combined_dict = copy.deepcopy(my_dict_1)
+
 print("combined_dict_0:",combined_dict)
 for i in my_dict_2:
     print(i)
