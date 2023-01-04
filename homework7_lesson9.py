@@ -4,54 +4,54 @@
 #     б) Создать список и поместить туда самое длинное имя. Если длина имени совпадает - поместить все такие имена.
 #     в) Посчитать среднее количество лет всех людей из начального списка.
 #
-# from statistics import mean
-#
-# persons = {
-#     1: {
-#         'name': 'John',
-#         'age': 15
-#     },
-#     2: {
-#         'name': 'Jack',
-#         'age': 45
-#     },
-#     3: {
-#         'name': 'Victor',
-#         'age': 23
-#     },
-#     4: {
-#         'name': 'Valery',
-#         'age': 21
-#     },
-#    5: {
-#         'name': 'Robert',
-#         'age': 15
-#     },
-#     6: {
-#         'name': 'Ben',
-#         'age': 15
-#     }
-# }
-# min_age=min(persons[id_person]['age'] for id_person in persons)
-# print("min_age=",min_age)
-# youngest_persons = []
-#
-# for id_person in persons:
-#     if persons[id_person]['age'] == min_age:
-#         youngest_persons.append(persons[id_person]['name'])
-# print(youngest_persons)
-# print("")
-# longest_names = []
-# longest_name_size = max(len(persons[id_person]['name']) for id_person in persons)
-# print("longest_name_size = ",longest_name_size)
-#
-# for id_person in persons:
-#     if len(persons[id_person]['name']) == longest_name_size:
-#         longest_names.append(persons[id_person]['name'])
-# print(longest_names)
-#
-# mean_age=mean(persons[id_person]['age'] for id_person in persons)
-# print("среднее количество лет всех людей ",round(mean_age))
+from statistics import mean
+
+persons = {
+    1: {
+        'name': 'John',
+        'age': 15
+    },
+    2: {
+        'name': 'Jack',
+        'age': 45
+    },
+    3: {
+        'name': 'Victor',
+        'age': 23
+    },
+    4: {
+        'name': 'Valery',
+        'age': 21
+    },
+   5: {
+        'name': 'Robert',
+        'age': 15
+    },
+    6: {
+        'name': 'Ben',
+        'age': 15
+    }
+}
+min_age=min(persons[id_person]['age'] for id_person in persons)
+print("min_age=",min_age)
+youngest_persons = []
+
+for id_person in persons:
+    if persons[id_person]['age'] == min_age:
+        youngest_persons.append(persons[id_person]['name'])
+print(youngest_persons)
+print("")
+longest_names = []
+longest_name_size = max(len(persons[id_person]['name']) for id_person in persons)
+print("longest_name_size = ",longest_name_size)
+
+for id_person in persons:
+    if len(persons[id_person]['name']) == longest_name_size:
+        longest_names.append(persons[id_person]['name'])
+print(longest_names)
+
+mean_age=mean(persons[id_person]['age'] for id_person in persons)
+print("среднее количество лет всех людей ",round(mean_age))
 
 
 
@@ -67,10 +67,10 @@
 
 
 
-import copy from deepcopy
+
 
 my_dict_1 = {1:1, 2:2, 5:5, 7:7}
-my_dict_2 = {11:11, 2:22, 1:56}
+my_dict_2 = {11:110, 2:22, 1:56}
 keys_my_dict_1 = list(my_dict_1.keys())
 keys_my_dict_2 = list(my_dict_2.keys())
 
@@ -103,21 +103,17 @@ print(dict_unique_keys1)
 print("my_dict_1", my_dict_1)
 print("my_dict_2", my_dict_2)
 
-# combined_dict = {k:v for k, v in my_dict_1.items()}
-combined_dict = copy.deepcopy(my_dict_1)
+combined_dict = {k:v for k, v in my_dict_1.items()}
 
-print("combined_dict_0:",combined_dict)
 for i in my_dict_2:
-    print(i)
+
     if i in combined_dict.keys():
-        print("enter if")
-        print(my_dict_2.get(i))
-        print(combined_dict.get(i))
+
         values = [combined_dict.get(i),my_dict_2.get(i)]
-        print(values)
+        combined_dict[i] = values
 
     else:
-        print("else",i)
-        combined_dict.update(my_dict_2)
+
+        combined_dict[i] = my_dict_2.get(i)
 
 print("combined_dict ",combined_dict)
