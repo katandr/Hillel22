@@ -15,7 +15,6 @@ def censor(file, words_to_replace:list):
             word_with_capital_plural = word_with_capital+'s'
             if text.find(word) != -1:
                 count_word = text.count(word)
-
                 text = text.replace(word, "***")
                 stats[word] = count_word
 
