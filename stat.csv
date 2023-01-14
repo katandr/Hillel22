@@ -1,0 +1,3 @@
+file name,list_of_words_to_replace,statistics_of_replacements
+file1.txt,"['friendship', 'gggggggg', 'frendly', 'friend']","{'friendship': 1, 'Friendship': 1, 'gggggggg': 0, 'frendly': 0, 'friend': 6}"
+file2_london.txt,"['london', 'paris']","{'London': 9, 'london': 9, 'paris': 0}"

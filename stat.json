@@ -1,0 +1,79 @@
+{
+  "file name": "file1.txt",
+  "list_of_words_to_replace": [
+    "friendship",
+    "gggggggg",
+    "frendly",
+    "friend"
+  ],
+  "statistics_of_replacements": {
+    "friendship": 1,
+    "Friendship": 1,
+    "gggggggg": 0,
+    "frendly": 0,
+    "friend": 6
+  }
+}{
+  "file name": "file2_london.txt",
+  "list_of_words_to_replace": [
+    "london",
+    "paris"
+  ],
+  "statistics_of_replacements": {
+    "London": 9,
+    "london": 9,
+    "paris": 0
+  }
+}{
+  "file name": "file1.txt",
+  "list_of_words_to_replace": [
+    "friendship",
+    "gggggggg",
+    "frendly",
+    "friend"
+  ],
+  "statistics_of_replacements": {
+    "friendship": 1,
+    "Friendship": 1,
+    "gggggggg": 0,
+    "frendly": 0,
+    "friend": 6
+  }
+}{
+  "file name": "file2_london.txt",
+  "list_of_words_to_replace": [
+    "london",
+    "paris"
+  ],
+  "statistics_of_replacements": {
+    "London": 9,
+    "london": 9,
+    "paris": 0
+  }
+}{
+  "file name": "file1.txt",
+  "list_of_words_to_replace": [
+    "friendship",
+    "gggggggg",
+    "frendly",
+    "friend"
+  ],
+  "statistics_of_replacements": {
+    "friendship": 1,
+    "Friendship": 1,
+    "gggggggg": 0,
+    "frendly": 0,
+    "friend": 6
+  }
+}{
+  "file name": "file2_london.txt",
+  "list_of_words_to_replace": [
+    "london",
+    "paris"
+  ],
+  "statistics_of_replacements": {
+    "London": 9,
+    "london": 9,
+    "paris": 0
+  }
+}
