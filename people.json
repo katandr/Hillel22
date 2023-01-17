@@ -1,0 +1,20 @@
+{
+  "first_name": "Ivasik",
+  "last_name": "Telesik",
+  "email": "vasik-telesik1732@izkurnanog.ua",
+  "age": 13,
+  "skills": [
+    "ходить",
+    "говорить",
+    "кодить"
+  ],
+  "people_lang": [
+    "Україньська",
+    "Англійська"
+  ],
+  "coding_lang": [
+    "Python",
+    "C++",
+    "lisp"
+  ]
+}
