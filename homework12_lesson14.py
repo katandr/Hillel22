@@ -32,29 +32,64 @@ class MyDirectory:
             list_of_files = []
             for path in os.scandir(dir_path):
                 if path.is_file():
-                    print(path.name)
                     list_of_files.append(path.name)
-            list_of_directories = []
-            p = os.listdir(dir_path)
-            for i in p:
+            list_of_folders = []
+            for i in os.listdir(dir_path):
                 if os.path.isdir(i):
-                    list_of_directories.append(i)
-
+                    list_of_folders.append(i)
 
             self.directory_dict={
                 'filenames' : list_of_files,
-                'dirnames' : list_of_directories,
+                'dirnames' : list_of_folders,
             }
         else:
             print("wrong directory name")
 
-        print(self.directory_dict)
-        return
+        return self.directory_dict
+
+    def sort_dict(self,dictionary: dict,sort: bool):
+        sort = not sort
+        files_sorted = sorted(dictionary['filenames'],reverse=sort)
+        folders_sorted = sorted(dictionary['dirnames'])
+        # print(f'sorted list of files {files_sorted}')
+        # print(f'sorted list of directories {folders_sorted}')
+        self.directory_dict_sorted = {
+            'filenames': files_sorted,
+            'dirnames': folders_sorted,
+        }
+        return self.directory_dict_sorted
+
+    def check_file_or_folder_and_add(self, name: str, current_dictionary: dict):
+        list_of_files = current_dictionary['filenames']
+        list_of_folders = current_dictionary['dirnames']
+        if '.' in name:
+            list_of_files.append(name)
+        else:
+            list_of_folders.append(name)
+
+        self.directory_dict_extend = {
+            'filenames': list_of_files,
+            'dirnames': list_of_folders,
+        }
+        return self.directory_dict_extend
+
+
+
 
 
 path = os.path.dirname(os.path.abspath(__file__))
 working_dir = MyDirectory(path)
-working_dir.create_dictionary(working_dir.dirname)
+
+dic_files_catalogs = working_dir.create_dictionary(working_dir.dirname)
+
+print(f'not sorted \n {dic_files_catalogs} \n')
+sorted_dic_files_directories = working_dir.sort_dict(dic_files_catalogs, False)
+print(f'sorted dictionary \n {sorted_dic_files_directories}')
+
+name='aaaaaaaaaaaaa.txt'
+extended_dictionary=working_dir.check_file_or_folder_and_add(name,dic_files_catalogs)
+print(f'extended dictionary \n {extended_dictionary}')
+
 
 
 
